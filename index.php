@@ -164,7 +164,7 @@ Along with the 3 column pictures on top of each other */
                 if(size < 0 || (grade<1 || grade>5) || parseInt(size)==NaN || parseInt(grade)==NaN || Date.parse(date)==NaN){
                     $("#serverResponse").html("<p>Invalid Input</p>");
                 }else{
-                $.get("weddingprocess.php", {'date' : date, 'partySize': size, 'cateringGrade' : grade}, function(responseData){  
+                $.get("search.php", {'date' : date, 'partySize': size, 'cateringGrade' : grade}, function(responseData){
                     let len = responseData.length;
                     let table = "<table><tr>"+
                     "<th>Name</th>"+
