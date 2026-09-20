@@ -29,7 +29,7 @@ The original database and credentials file are not included. Create a MySQL or M
 | `venue_booking` | `venue_id`, `booking_date` |
 | `catering` | `venue_id`, `grade`, `cost` |
 
-Create `coa123-mysql-connect.php` beside `weddingprocess.php` and define `$servername`, `$username`, `$password` and `$dbName`. Keep that file out of version control.
+Create `coa123-mysql-connect.php` beside `search.php` and define `$servername`, `$username`, `$password` and `$dbName`. Keep that file out of version control.
 
 For a simple development server:
 
@@ -37,12 +37,12 @@ For a simple development server:
 php -S localhost:8000
 ```
 
-Then open `http://localhost:8000/wedding.php`.
+Then open `http://localhost:8000`.
 
 ## Request flow
 
-1. `wedding.php` collects the date, party size and catering grade.
-2. jQuery sends the values to `weddingprocess.php`.
+1. `index.php` collects the date, party size and catering grade.
+2. jQuery sends the values to `search.php`.
 3. PHP queries venue, booking and catering data.
 4. Matching rows are returned as JSON and rendered in the browser.
 
